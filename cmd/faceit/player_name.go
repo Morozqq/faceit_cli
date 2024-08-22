@@ -24,7 +24,7 @@ func FindNickName(nickname string) (string, error) {
 
 	req.Header = http.Header{
 		"Content-Type":  {"application/json"},
-		"Authorization": {"Bearer 3b5a9d07-4b77-4be4-bf5d-f9ff3d6cb7b6"},
+		"Authorization": {"Bearer " + config.APIKey},
 	}
 
 	res, err := client.Do(req)
